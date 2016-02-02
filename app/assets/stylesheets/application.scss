@@ -1,0 +1,34 @@
+/**
+ stylesheets/
+ |– base/
+ |  |– _normalize.scss   # normalize.css v3.0.2
+ |  |– _base.scss        # Base styles and defaults
+ |  |– _typography.scss  # Typography rules
+ |
+ |– components/
+ |   |– _file.scss       # Description
+ |
+ |– layout/
+ |   |– _file.scss       # Description
+ |
+ |– pages/
+ |   |– _demo.scss       # Styles for Milligram demonstration
+ |
+ |– utils/
+ |   |– _variables.scss  # Sass Variables
+ |   |– _functions.scss  # Sass Functions
+ |   |– _mixins.scss     # Sass Mixins
+ |   |– _helpers.scss    # Class & placeholders helpers
+ |   |– _colors.scss     # Colors
+ |
+ |– vendor/
+ |   |– _milligram.css   # Milligram
+ */
+
+@import 'vendor/milligram.css';
+
+@import 'base/normalize';
+@import 'base/typography';
+@import 'base/base';
+
+@import 'pages/demo'
