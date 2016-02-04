@@ -2,7 +2,7 @@ var TodoItem = React.createClass({
   render: function() {
     return (
       <li>
-        {this.props.todos}
+        todo item 1
       </li>
     );
   }
