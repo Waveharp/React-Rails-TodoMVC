@@ -2,7 +2,7 @@ var TodoItem = React.createClass({
   render: function() {
     return (
       <li>
-        todo item 1
+        {this.props.todos}
       </li>
     );
   }
@@ -24,20 +24,25 @@ var TodoList = React.createClass({
       <div>
         <TodoInput />
         <ul>
-          <TodoItem />
+          <TodoItem todos={TODOS}/>
         </ul>
       </div>
     );
   }
 });
 
-var TODOS = [
-  {name: 'Finish todo list'},
-  {name: "Don't mess this up"},
-  {name: 'Configure Vagrant box'}
-];
+var TestItem = React.createClass({
+  render: function() {
+    return (
+      <ul>
+        <li>{this.props.todoitem}</li>
+      </ul>
+    );
+  }
+});
 
-// ReactDOM.render(
-//   <TodoList todos={TODOS} />,
-//   document.getElementById('container')
-// );
+var TODOS = [
+  'Finish todo list',
+  'Don\'t mess this up',
+  'Configure Vagrant box'
+];
