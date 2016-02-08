@@ -1,3 +1,18 @@
+/* 
+  App
+*/
+
+var App = React.createClass({
+  render : function() {
+    return (
+      <div className="mainApp">
+        <TodoInput />
+        <TodoList />
+      </div>  
+    )
+  }
+});
+
 var TodoItem = React.createClass({
   render: function() {
     return (
@@ -21,12 +36,9 @@ var TodoInput = React.createClass({
 var TodoList = React.createClass({
   render: function() {
     return (
-      <div>
-        <TodoInput />
-        <ul>
-          <TodoItem todos={TODOS}/>
-        </ul>
-      </div>
+      <ul>
+        <TodoItem todos={TODOS}/>
+      </ul>
     );
   }
 });
