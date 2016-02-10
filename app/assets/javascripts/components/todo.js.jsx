@@ -1,60 +1,41 @@
-/* 
+/*
   App
 */
 
 var App = React.createClass({
   render : function() {
     return (
-      <div className="mainApp">
-        <TodoInput />
+      <div className="TodoMVC">
+        <AddTodo />
         <TodoList />
-      </div>  
+      </div>
     )
   }
 });
 
-var TodoItem = React.createClass({
-  render: function() {
-    return (
-      <li>
-        {this.props.todos}
-      </li>
-    );
-  }
-});
+/* 
+  AddTodo
+*/
 
-var TodoInput = React.createClass({
-  render: function() {
+var AddTodo = React.createClass({
+  render : function() {
     return (
       <form>
-        <input type="text" placeholder="What needs to be done?" />
+        <h4>What needs to be done?</h4>
+        <input type="text" ref="todoItem" />
       </form>
-    );
+    )
   }
 });
+
+/*
+  TodoList
+*/
 
 var TodoList = React.createClass({
-  render: function() {
+  render : function() {
     return (
-      <ul>
-        <TodoItem todos={TODOS}/>
-      </ul>
-    );
+      <p>Todo List</p>
+    )
   }
 });
-
-var TestItem = React.createClass({
-  render: function() {
-    return (
-      <ul>
-        <li>{this.props.todoitem}</li>
-      </ul>
-    );
-  }
-});
-
-var TODOS = [
-  'Finish todo list',
-  'Don\'t mess this up',
-  'Configure Vagrant box'
-];
