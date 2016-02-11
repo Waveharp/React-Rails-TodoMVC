@@ -13,11 +13,17 @@ var App = React.createClass({
   }
 });
 
+
+
 /* 
   AddTodo
 */
 
 var AddTodo = React.createClass({
+  createTodo : function(event) {
+    event.preventDefault();
+  }, 
+  
   render : function() {
     return (
       <form>
@@ -28,14 +34,24 @@ var AddTodo = React.createClass({
   }
 });
 
+
+
 /*
   TodoList
 */
 
 var TodoList = React.createClass({
+
+  renderTodoList : function(key) {
+    var todo = this.props.todos[key];
+    var count = this.props.order[key];
+  },
+
   render : function() {
     return (
       <p>Todo List</p>
     )
   }
 });
+
+
